@@ -25,7 +25,9 @@ const Products = () => {
           </option>
         </select>
 
-        <span>{filteredProducts.length} Products Found</span>
+        <span style={{ marginLeft: "20px" }}>
+          {filteredProducts.length} Products Found
+        </span>
       </div>
 
       <div className="products flex">
