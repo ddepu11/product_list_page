@@ -9,10 +9,13 @@ const Product = ({ title, price, size, soldBy, brand, idealFor, image }) => {
 
       <div className="info">
         <h2 className="title">{title}</h2>
+
         <h3 className="price">Price: {price}</h3>
         <h4 className="size">Size: {size}</h4>
+
         <h4 className="sold_by">Sold By: {soldBy}</h4>
         <h4 className="brand">Brand: {brand}</h4>
+
         <h4 className="ideal_for">
           Ideal for:{" "}
           {idealFor.map((item) => (

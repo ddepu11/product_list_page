@@ -4,25 +4,20 @@ import Product from "../../../Components/Product";
 import { ProductsContext } from "../../../context/productContext";
 
 const Products = () => {
-  const { filteredProducts, sortProducts } = useContext(ProductsContext);
-
-  const [sortBy, setSortBy] = useState("select");
-
-  useEffect(() => {
-    sortBy !== "select" && sortProducts(sortBy);
-  }, [sortBy]);
-
-  const handleSort = (e) => {
-    const { value } = e.target;
-    setSortBy(value);
-  };
+  const { filteredProducts, handleFilters, filters } =
+    useContext(ProductsContext);
 
   return (
     <Wrapper className="flex">
       <div className="sort_by_div">
         <label htmlFor="sort_by">Sort By Price</label>
 
-        <select name="sortBy" id="sort_by" value={sortBy} onChange={handleSort}>
+        <select
+          name="sortBy"
+          id="sort_by"
+          value={filters.sortBy}
+          onChange={handleFilters}
+        >
           <option value="highToLow">High-to-Low</option>
           <option value="lowToHigh">Low-to-High</option>
           <option value="select" disabled>

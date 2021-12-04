@@ -1,69 +1,64 @@
 import {
   CLEAR_FILTERS,
   FILTER_PRODUCTS,
-  SORT_PRODUCTS,
+  SET_FILTER,
 } from "../actions/productActions";
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case SORT_PRODUCTS:
-      const sortBy = action.payload;
+    case SET_FILTER:
+      const { name, value } = action.payload;
 
-      if (sortBy === "highToLow") {
-        console.log(sortBy);
-        return {
-          ...state,
-          filteredProducts: [
-            ...state.products.sort((a, b) => b.price - a.price),
-          ],
-        };
-      }
-
-      if (sortBy === "lowToHigh") {
-        return {
-          ...state,
-          filteredProducts: [
-            ...state.products.sort((a, b) => a.price - b.price),
-          ],
-        };
-      }
+      return {
+        ...state,
+        filters: {
+          ...state.filters,
+          [name]: value,
+        },
+      };
 
     case FILTER_PRODUCTS:
-      const { filterBy, filterValue } = action.payload;
+      const { size, brand, idealFor } = action.payload;
 
-      if (filterBy === "size") {
-        return {
-          ...state,
-          filteredProducts: [
-            ...state.products.filter((item) => item.size === filterValue),
-          ],
-        };
+      let newProducts = [...state.products];
+
+      if (size !== "all") {
+        newProducts = [...newProducts.filter((item) => item.size === size)];
       }
 
-      if (filterBy === "brand") {
-        return {
-          ...state,
-          filteredProducts: [
-            ...state.products.filter((item) => item.brand === filterValue),
-          ],
-        };
+      if (brand !== "all") {
+        newProducts = [...newProducts.filter((item) => item.brand === brand)];
       }
 
-      if (filterBy === "idealFor") {
-        return {
-          ...state,
-          filteredProducts: [
-            ...state.products.filter((item) =>
-              item.idealFor.includes(filterValue)
-            ),
-          ],
-        };
+      if (idealFor !== "all") {
+        newProducts = [
+          ...newProducts.filter((item) => item.idealFor.includes(idealFor)),
+        ];
       }
+
+      if (state.filters.sortBy === "highToLow") {
+        newProducts = [...newProducts.sort((a, b) => b.price - a.price)];
+      }
+
+      if (state.filters.sortBy === "lowToHigh") {
+        newProducts = [...newProducts.sort((a, b) => a.price - b.price)];
+      }
+
+      return {
+        ...state,
+        filteredProducts: [...newProducts],
+      };
 
     case CLEAR_FILTERS:
       return {
         ...state,
         filteredProducts: [...state.products],
+        filters: {
+          size: "all",
+          brand: "all",
+          idealFor: "all",
+          sortBy: "select",
+        },
       };
 
     default:

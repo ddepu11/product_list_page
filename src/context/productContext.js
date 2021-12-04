@@ -1,11 +1,21 @@
-import { createContext, useReducer } from "react";
-import { CLEAR_FILTERS, FILTER_PRODUCTS, SORT_PRODUCTS } from "../actions/productActions";
+import { createContext, useEffect, useReducer } from "react";
+import {
+  CLEAR_FILTERS,
+  FILTER_PRODUCTS,
+  SET_FILTER,
+} from "../actions/productActions";
 import productsData from "../data/products.json";
 import reducer from "../reducers/productReducer";
 
 const initialState = {
   products: [...productsData.products],
   filteredProducts: [...productsData.products],
+  filters: {
+    size: "all",
+    brand: "all",
+    idealFor: "all",
+    sortBy: "select",
+  },
 };
 
 const ProductsContext = createContext();
@@ -13,22 +23,31 @@ const ProductsContext = createContext();
 const ProductsProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const sortProducts = (sortBy) => {
-    dispatch({ type: SORT_PRODUCTS, payload: sortBy });
-    console.log(sortBy);
+  const filterProducts = (filters) => {
+    dispatch({ type: FILTER_PRODUCTS, payload: filters });
   };
 
-  const filterProducts = (filterBy, filterValue) => {
-    dispatch({ type: FILTER_PRODUCTS, payload: { filterBy, filterValue } });
+  const handleFilters = (e) => {
+    const { name, value } = e.target;
+    dispatch({ type: SET_FILTER, payload: { name, value } });
   };
 
-  const clearFilters = () => {
+  useEffect(() => {
+    filterProducts(state.filters);
+  }, [state.filters]);
+
+  const handleClearFilters = () => {
     dispatch({ type: CLEAR_FILTERS });
   };
 
   return (
     <ProductsContext.Provider
-      value={{ ...state, sortProducts, filterProducts, clearFilters }}
+      value={{
+        ...state,
+        filterProducts,
+        handleFilters,
+        handleClearFilters,
+      }}
     >
       {children}
     </ProductsContext.Provider>

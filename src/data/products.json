@@ -60,6 +60,26 @@
       "soldBy": "Umesh DS",
       "size": "l",
       "image": "https://rukminim1.flixcart.com/image/880/1056/kh5607k0/sweatshirt/t/5/p/xl-jb-w02-black-juneberry-original-imafx7v9sudvzxmu.jpeg?q=50"
+    },
+    {
+      "id": "7",
+      "title": "Color Block Men Hooded",
+      "price": 349,
+      "brand": "Eyebogler",
+      "idealFor": ["women"],
+      "soldBy": "Sohan Singh",
+      "size": "m",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kkec4280/t-shirt/b/m/i/l-t345-blwhrd-new-eyebogler-original-imafzr4f7nxecr44.jpeg?q=50"
+    },
+    {
+      "id": "8",
+      "title": "Color Block Men Hooded",
+      "price": 359,
+      "brand": "Seven Rocks",
+      "idealFor": ["men", "boys"],
+      "soldBy": "Sohan Singh",
+      "size": "m",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kjuby4w0/t-shirt/2/v/a/3xl-t2-seven-rocks-original-imafzbptgchwstcx.jpeg?q=50"
     }
   ]
 }

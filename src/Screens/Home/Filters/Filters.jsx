@@ -1,18 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import styled from "styled-components";
 import { ProductsContext } from "../../../context/productContext";
 
 const Filters = () => {
-  const { filterProducts, products, clearFilters } =
+  const { products, filters, handleFilters, handleClearFilters } =
     useContext(ProductsContext);
 
-  const [filters, setFilters] = useState({
-    size: "all",
-    brand: "select",
-    idealFor: "all",
-  });
-
-  // let uniqueBrands = [...new Set()];
   let brands = [];
 
   products.forEach((item) => {
@@ -20,39 +13,6 @@ const Filters = () => {
   });
 
   brands = Array.from(new Set(brands));
-
-  useEffect(() => {
-    filters.size !== "all" && filterProducts("size", filters.size);
-  }, [filters.size]);
-
-  useEffect(() => {
-    filters.brand !== "select" && filterProducts("brand", filters.brand);
-  }, [filters.brand]);
-
-  useEffect(() => {
-    filters.idealFor !== "all" && filterProducts("idealFor", filters.idealFor);
-  }, [filters.idealFor]);
-
-  const handleFilters = (e) => {
-    const { name, value } = e.target;
-
-    setFilters((prevFilters) => {
-      return {
-        ...prevFilters,
-        [name]: value,
-      };
-    });
-  };
-
-  const handleClearFilters = () => {
-    setFilters({
-      size: "all",
-      brand: "select",
-      idealFor: "all",
-    });
-
-    clearFilters();
-  };
 
   return (
     <Wrapper>
@@ -71,7 +31,7 @@ const Filters = () => {
                 value="s"
                 onChange={handleFilters}
               />
-              <label htmlFor="s">S</label>
+              <label htmlFor="s">Small</label>
             </div>
 
             <div className="row">
@@ -82,7 +42,7 @@ const Filters = () => {
                 value="m"
                 onChange={handleFilters}
               />
-              <label htmlFor="m">M</label>
+              <label htmlFor="m">Medium</label>
             </div>
 
             <div className="row">
@@ -93,7 +53,7 @@ const Filters = () => {
                 onChange={handleFilters}
                 value="l"
               />
-              <label htmlFor="l">L</label>
+              <label htmlFor="l">Large</label>
             </div>
 
             <div className="row">
@@ -104,7 +64,7 @@ const Filters = () => {
                 onChange={handleFilters}
                 value="xl"
               />
-              <label htmlFor="xl">XL</label>
+              <label htmlFor="xl">Extra Large</label>
             </div>
           </div>
         </div>
@@ -113,16 +73,19 @@ const Filters = () => {
           <h3>Brand</h3>
 
           <div className="brands">
-            <select name="brand" id="brands" onChange={handleFilters}>
+            <select
+              name="brand"
+              id="brands"
+              value={filters.brand}
+              onChange={handleFilters}
+            >
               {brands.map((item) => (
                 <option key={item} value={item}>
                   {item}
                 </option>
               ))}
 
-              <option value="select" disabled selected>
-                Select
-              </option>
+              <option value="all">All</option>
             </select>
           </div>
         </div>
