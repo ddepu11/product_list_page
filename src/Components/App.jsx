@@ -1,13 +1,15 @@
 import styled from "styled-components";
+import { ProductsProvider } from "../context/productContext";
 import Filters from "../Screens/Home/Filters/Filters";
 import Products from "../Screens/Home/Products/Products";
 
 const App = () => {
   return (
     <Wrapper className="container flex">
-      <Filters />
-
-      <Products />
+      <ProductsProvider>
+        <Filters />
+        <Products />
+      </ProductsProvider>
     </Wrapper>
   );
 };

@@ -1,0 +1,65 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Woolen Cap",
+      "price": 218,
+      "brand": "Freaks",
+      "idealFor": ["men", "women"],
+      "soldBy": "Mohan Kumar",
+      "size": "m",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kgsb1jk0/cap/h/y/g/free-stylish-black-balkalova-cap-fashlook-original-imafwy64umkfsefu.jpeg?q=50"
+    },
+
+    {
+      "id": "2",
+      "title": "Casual Jacket",
+      "price": 509,
+      "brand": "Tripr",
+      "idealFor": ["men"],
+      "soldBy": "Umesh DS",
+      "size": "l",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/krqoknk0/jacket/1/w/d/xxl-trdgynvhdfuljacket-k15-tripr-original-imag5gganntw7xsg.jpeg?q=50"
+    },
+    {
+      "id": "3",
+      "title": "Round neck tshirt",
+      "price": 350,
+      "brand": "Seven Rocks",
+      "idealFor": ["men"],
+      "soldBy": "Sohan Singh",
+      "size": "s",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kjiwfbk0-0/t-shirt/e/k/s/m-t305-as10yldnwh-seven-rocks-original-imafz2qfvx7tznnn.jpeg?q=50"
+    },
+    {
+      "id": "4",
+      "title": "Cap",
+      "price": 230,
+      "brand": "Amor Mente",
+      "idealFor": ["women", "girls"],
+      "soldBy": "Mohan Kumar",
+      "size": "l",
+      "image": "https://rukminim1.flixcart.com/image/760/912/ki6bgcw0-0/cap/n/4/s/free-grey-men-cap-with-neck-scarf-amormente-original-imafyf335zbpvsdz.jpeg?q=50"
+    },
+    {
+      "id": "5",
+      "title": "Sweat Shirt",
+      "price": 599,
+      "brand": "Amor Mente",
+      "idealFor": ["girls"],
+      "soldBy": "Sohan Singh",
+      "size": "xl",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/j9st5zk0/sweatshirt/z/f/y/l-whomaroon-whoroyalblue-fleximaa-original-imaezgd5usq5z74v.jpeg?q=50"
+    },
+    {
+      "id": "6",
+      "title": "Full Sleeve Sweat Shirt",
+      "price": 690,
+      "brand": "FLEXIMAA Fleximaa",
+      "idealFor": ["women"],
+      "soldBy": "Umesh DS",
+      "size": "l",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kh5607k0/sweatshirt/t/5/p/xl-jb-w02-black-juneberry-original-imafx7v9sudvzxmu.jpeg?q=50"
+    }
+  ]
+}
