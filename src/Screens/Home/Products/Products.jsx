@@ -24,6 +24,8 @@ const Products = () => {
             Select
           </option>
         </select>
+
+        <span>{filteredProducts.length} Products Found</span>
       </div>
 
       <div className="products flex">

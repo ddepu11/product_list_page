@@ -55,7 +55,7 @@
       "id": "6",
       "title": "Full Sleeve Sweat Shirt",
       "price": 690,
-      "brand": "FLEXIMAA Fleximaa",
+      "brand": "Seven Rocks",
       "idealFor": ["women"],
       "soldBy": "Umesh DS",
       "size": "l",
@@ -65,10 +65,10 @@
       "id": "7",
       "title": "Color Block Men Hooded",
       "price": 349,
-      "brand": "Eyebogler",
+      "brand": "Seven Rocks",
       "idealFor": ["women"],
       "soldBy": "Sohan Singh",
-      "size": "m",
+      "size": "xl",
       "image": "https://rukminim1.flixcart.com/image/880/1056/kkec4280/t-shirt/b/m/i/l-t345-blwhrd-new-eyebogler-original-imafzr4f7nxecr44.jpeg?q=50"
     },
     {
@@ -80,6 +80,46 @@
       "soldBy": "Sohan Singh",
       "size": "m",
       "image": "https://rukminim1.flixcart.com/image/880/1056/kjuby4w0/t-shirt/2/v/a/3xl-t2-seven-rocks-original-imafzbptgchwstcx.jpeg?q=50"
+    },
+    {
+      "id": "9",
+      "title": "Printed Shirt",
+      "price": 296,
+      "brand": "Trijal Fab",
+      "idealFor": ["men", "boys"],
+      "soldBy": "Mohan Kumar",
+      "size": "s",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/ksc46fk0/fabric/o/d/b/no-2-35-m-unstitched-beard01-trijal-fab-original-imag5xcyfztrekcr.jpeg?q=50"
+    },
+    {
+      "id": "10",
+      "title": "Polo T Shirt",
+      "price": 380,
+      "brand": "Trijal Fab",
+      "idealFor": ["boys"],
+      "soldBy": "Sohan Singh",
+      "size": "m",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kfoapow0-0/t-shirt/d/w/y/xl-t16-seven-rocks-original-imafw2jyyt3bzxda.jpeg?q=50"
+    },
+    {
+      "id": "11",
+      "title": "Women Kurta",
+      "price": 419,
+      "brand": "Freaks",
+      "idealFor": ["women"],
+      "soldBy": "Sohan Singh",
+      "size": "l",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/kv1a4cw0/ethnic-set/w/t/d/xl-turkey-beige-bright-sayera-original-imag8f6ajwqjhw2j.jpeg?q=50"
+    },
+    {
+      "id": "12",
+      "title": "Men & Women Bandana",
+      "price": 125,
+      "brand": "Freaks",
+      "idealFor": ["women", "men"],
+      "soldBy": "Mohan Kumar",
+      "size": "xl",
+      "image": "https://rukminim1.flixcart.com/image/880/1056/knw2v0w0/bandana/8/g/j/na-free-vpc368-voici-na-original-imag2gu53gnmjzc3.jpeg?q=50"
     }
   ]
 }

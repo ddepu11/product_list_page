@@ -140,7 +140,9 @@ const Filters = () => {
           </div>
         </div>
 
-        <button onClick={handleClearFilters}>Clear Filters</button>
+        <button onClick={handleClearFilters} className="clearBtn">
+          Clear Filters
+        </button>
       </div>
     </Wrapper>
   );
@@ -166,6 +168,13 @@ const Wrapper = styled.main`
     input {
       margin-right: 10px;
     }
+  }
+
+  .clearBtn {
+    font-size: 1.1em;
+    padding: 5px 10px;
+    background-color: #b11f1f;
+    color: white;
   }
 `;
 
