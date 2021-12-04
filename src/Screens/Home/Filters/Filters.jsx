@@ -66,6 +66,17 @@ const Filters = () => {
               />
               <label htmlFor="xl">Extra Large</label>
             </div>
+
+            <div className="row">
+              <input
+                type="radio"
+                id="all"
+                name="size"
+                onChange={handleFilters}
+                value="all"
+              />
+              <label htmlFor="all">All</label>
+            </div>
           </div>
         </div>
 
@@ -136,6 +147,18 @@ const Filters = () => {
                 onChange={handleFilters}
               />
               <label htmlFor="girls">Girls</label>
+            </div>
+
+            <div className="row">
+              <input
+                type="radio"
+                id="ideal-all"
+                name="idealFor"
+                value="all"
+                onChange={handleFilters}
+              />
+
+              <label htmlFor="ideal-all">All</label>
             </div>
           </div>
         </div>
